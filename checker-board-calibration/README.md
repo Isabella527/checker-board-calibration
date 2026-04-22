@@ -23,24 +23,23 @@ Correct common geometric errors in world-frame camera positioning.
 
 ### Methodology
 1. Checkerboard Calibration
-The system uses a 9×6 checkerboard grid to establish correspondences between:
+  The system uses a 9×6 checkerboard grid to establish correspondences between:
 
-2D Image Points (p): Detected using OpenCV's findChessboardCorners with sub-pixel refinement.
+  2D Image Points (p): Detected using OpenCV's findChessboardCorners with sub-pixel refinement.
 
-3D World Points (P): Defined on a planar grid where Z=0.
+  3D World Points (P): Defined on a planar grid where Z=0.
 
 2. The DLT Algorithm
-We solve for the 3×4 projection matrix M by constructing the Q matrix and applying Singular Value Decomposition (SVD) to solve the homogeneous linear system:
-
-p≈MP
+   We solve for the 3×4 projection matrix M by constructing the Q matrix and applying Singular Value Decomposition (SVD) to solve the homogeneous linear system:
+   p≈MP
 3. Parameter Decomposition
-Using RQ Factorization, we decompose M into:
+   Using RQ Factorization, we decompose M into:
 
-Intrinsic Matrix (K): Focal length, principal point, and skew.
+   Intrinsic Matrix (K): Focal length, principal point, and skew.
 
-Extrinsic Rotation (R): Orientation of the camera.
+   Extrinsic Rotation (R): Orientation of the camera.
 
-Extrinsic Translation (T): Position relative to the world origin.
+   Extrinsic Translation (T): Position relative to the world origin.
 
 ### Key Geometric Correction
 A critical aspect of this project is the accurate calculation of the Camera Center (C) in world coordinates. As identified during validation, the center is not simply −T, but is calculated as:
@@ -56,7 +55,9 @@ $$
 
 ### 📊 Results
 ​
-### paste picture here 
+<img width="2560" height="1440" alt="prob3" src="https://github.com/user-attachments/assets/f9c4b5c0-18ad-43e0-9445-55f6ee509cf7" />
+<img width="900" height="600" alt="prob2_example" src="https://github.com/user-attachments/assets/c7ff7259-f661-40fc-9b1c-9e292bcea0c4" />
+
 
 
 ### Visualization
