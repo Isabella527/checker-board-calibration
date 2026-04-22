@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.npz  # Optional: only if you don't want to track large data files
+.DS_Store
