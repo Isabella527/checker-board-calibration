@@ -1,5 +1,6 @@
 # 📸 Implementing Tsai’s Calibration and DLT for 3D Computer Vision 
-### Put picture here 
+<img width="2816" height="1536" alt="Gemini_Generated_Image_v8juv2v8juv2v8ju (1)" src="https://github.com/user-attachments/assets/96e51eec-6dbc-431f-9683-db3fbfbdc1a2" />
+
 A complete computer vision pipeline for monocular 3D reconstruction, utilizing Direct Linear Transformation (DLT) and Tsai’s Algorithm to map 2D pixels to 3D world coordinates.
 
 ### Overview
